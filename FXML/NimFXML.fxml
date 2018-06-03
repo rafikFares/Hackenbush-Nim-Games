@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<BorderPane fx:controller="FXX.Controllers.ControllerNim"
+            xmlns:fx="http://javafx.com/fxml" prefWidth="1000" prefHeight="600"
+            onMouseClicked="#borderPaneClick" fx:id="borderpane">
+
+    <top>
+        <HBox alignment="center" spacing="30">
+
+            <padding>
+                <Insets top="5" bottom="5" left="20" right="20"/>
+            </padding>
+
+            <Label fx:id="lnumberOfHeaps" text="Number Of Heaps :"/>
+            <TextField fx:id="tFieldnumberOfHeaps" text="10"/>
+            <Label fx:id="lmaxSize" text="Max Size :"/>
+            <TextField fx:id="tFieldmaxSize" text="8"/>
+
+            <Button fx:id="bGenrate" text="Generate" onAction="#onActionGenerate"/>
+
+            <Separator orientation="VERTICAL"/>
+
+            <Button fx:id="retour" text="Retour accueil" onAction="#onActionBack"/>
+
+        </HBox>
+
+    </top>
+
+
+    <center>
+
+        <Pane fx:id="paneNim" onMouseClicked="#paneClick">
+
+            <Line fx:id="line" startX="100" startY="500" endX="900" endY="500" stroke="black"
+                  strokeWidth="4" onMouseEntered="#onMouseEnteredLine"/>
+
+        </Pane>
+
+    </center>
+
+    <bottom>
+
+        <HBox alignment="center" spacing="10">
+
+            <padding>
+                <Insets top="5" bottom="5" left="5" right="5"/>
+            </padding>
+
+            <fx:define>
+                <ToggleGroup fx:id="toggleGroup"/>
+            </fx:define>
+
+            <fx:define>
+                <ToggleGroup fx:id="toggleGroup2"/>
+            </fx:define>
+
+            <RadioButton fx:id="misere" text="Misère" onAction="#onActionTypeDeJeux" toggleGroup="$toggleGroup"/>
+            <RadioButton fx:id="normal" text="Normal" onAction="#onActionTypeDeJeux" toggleGroup="$toggleGroup"/>
+            <Separator orientation="VERTICAL"/>
+            <RadioButton fx:id="ia" text="Player Contre IA" onAction="#onActionIA" toggleGroup="$toggleGroup2"/>
+            <RadioButton fx:id="iaContreIa" text="IA Contre IA" onAction="#onActionIAContreIA"
+                         toggleGroup="$toggleGroup2"/>
+            <Separator orientation="VERTICAL"/>
+            <Button fx:id="bStart" text="Start" onAction="#onActionStart" disable="true"/>
+
+        </HBox>
+
+    </bottom>
+
+
+</BorderPane>

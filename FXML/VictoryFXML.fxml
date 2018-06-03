@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefWidth="1000" prefHeight="600"
+            fx:controller="FXX.GameControllers.GameVictory">
+    <top>
+
+        <BorderPane fx:id="viPaneHaut" prefWidth="1000" prefHeight="100">
+            <center>
+                <Label fx:id="viLabel"/>
+            </center>
+        </BorderPane>
+
+    </top>
+
+    <center>
+
+        <Pane fx:id="viPaneBas" prefWidth="1000"/>
+
+    </center>
+
+</BorderPane>

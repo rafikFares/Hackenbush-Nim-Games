@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FXX.Controllers.ControllerStart"
+            prefWidth="1000" prefHeight="620"
+            fx:id="anchor">
+
+    <center>
+
+        <HBox alignment="CENTER" spacing="40">
+
+            <padding>
+                <Insets top="0" bottom="0" left="0" right="0"/>
+            </padding>
+
+            <Button fx:id="bHack" text="Hackenbush" onAction="#onActionHack"/>
+            <Button fx:id="bNim" text="Nim" onAction="#onActionNim"/>
+
+        </HBox>
+
+    </center>
+
+
+</BorderPane>

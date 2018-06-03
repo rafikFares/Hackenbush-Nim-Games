@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefWidth="1000" prefHeight="600"
+            fx:controller="FXX.GameControllers.GameNim">
+
+<top>
+
+    <HBox alignment="center" spacing="30" >
+
+        <padding>
+            <Insets top="5" bottom="5" left="20" right="20"/>
+        </padding>
+
+        <Label fx:id="lvite" text="Vitesse" visible="false"/>
+        <Slider fx:id="sVitesse" min="0" max="100" showTickLabels="true"
+                showTickMarks="true" majorTickUnit="20" minorTickCount="10" prefWidth="400"
+                blockIncrement="10" orientation="HORIZONTAL" value="50" onMouseDragged="#sliderDragDone" visible="false"/>
+
+        <Label fx:id="lplayerTurn" text="Player Turn :" />
+
+        <Label fx:id="lplayer" text="RED" />
+
+        <Button fx:id="bStartGame" text="StartGame" onAction="#onActionStartGame" visible="false" />
+
+        <Button fx:id="bExit" text="Exit" onAction="#onActionExit" />
+
+    </HBox>
+
+</top>
+
+
+<center>
+
+    <Pane fx:id="paneGameNim" onMouseClicked="#paneClick" >
+
+    </Pane>
+
+</center>
+
+
+</BorderPane>

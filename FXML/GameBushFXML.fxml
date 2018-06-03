@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefWidth="1000" prefHeight="600"
+            fx:controller="FXX.GameControllers.GameBush">
+
+<top>
+
+    <HBox alignment="center" spacing="30" >
+
+        <padding>
+            <Insets top="5" bottom="5" left="20" right="20"/>
+        </padding>
+
+        <Label fx:id="lplayerTurn" text="Player Turn :" />
+
+        <Label fx:id="lplayer" text="RED" />
+
+        <Button fx:id="bUndo" text="Undo" onAction="#onActionUndo" />
+        <Button fx:id="bExit" text="Exit" onAction="#onActionExit" />
+
+    </HBox>
+
+</top>
+
+
+<center>
+
+    <Pane fx:id="paneGameBush" onMouseClicked="#paneClick" >
+
+
+
+    </Pane>
+
+</center>
+
+
+</BorderPane>
